@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flashcards</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+
+    <section class="stats">
+      <div id="daily-count">Today: 0</div>
+      <div id="total-count">Total: 0</div>
+    </section>
+    <section class="card" id="card">
+      <div class="front" id="front"></div>
+      <div class="back" id="back"></div>
+    </section>
+    <div class="controls">
+  <button id="nextBtn">Next Random</button>
+  <button id="listBtn">Show List</button>
+  <button id="knownBtn">Mark Known</button>
+  <button id="resetBtn">Reset Daily</button>
+</div>
+<div id="progress" class="progress"></div>
+    <section class="list hidden" id="listSection">
+      <h2>All Cards</h2>
+    <div class="filters" style="margin-bottom:0.5rem;">
+      <button id="mostBtn" style="margin-right:0.3rem;">Most Read</button>
+      <button id="leastBtn" style="margin-right:0.3rem;">Least Read</button>
+      <button id="resetSortBtn">Reset Order</button>
+    </div>
+      <ul id="cardList"></ul>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
