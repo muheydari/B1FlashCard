@@ -7,14 +7,14 @@ const allowedUsers = ['Rebin', 'Badri'];
 function askUserName() {
   let name = null;
   while (true) {
-    name = prompt('Enter your name (Rebin or Badri):');
+    name = prompt('Enter your name:');
     if (name === null) {
       return null;
     }
     if (allowedUsers.includes(name)) {
       return name;
     }
-    alert('Invalid name. Please enter Rebin or Badri.');
+    alert('Invalid name.');
   }
 }
 const currentUser = askUserName();
