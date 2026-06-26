@@ -161,6 +161,15 @@ function markKnown() {
   }
 }
 
+function pronounceGerman() {
+  if (!currentCard) return;
+  const utterance = new SpeechSynthesisUtterance(currentCard.front);
+  utterance.lang = 'de-DE';
+  utterance.rate = 0.9;
+  window.speechSynthesis.cancel();
+  window.speechSynthesis.speak(utterance);
+}
+
 function showList() {
   const listSection = document.getElementById('listSection');
   const ul = document.getElementById('cardList');
@@ -216,6 +225,7 @@ document.addEventListener('DOMContentLoaded', () => {
   loadCSV();
   document.getElementById('nextBtn').addEventListener('click', showRandomCard);
   document.getElementById('listBtn').addEventListener('click', showList);
+  document.getElementById('pronounceBtn').addEventListener('click', pronounceGerman);
   document.getElementById('card').addEventListener('click', toggleFlip);
   // sorting buttons
   document.getElementById('mostBtn').addEventListener('click', () => {
