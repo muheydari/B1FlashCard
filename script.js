@@ -215,6 +215,7 @@ function resetDaily() {
 document.addEventListener('DOMContentLoaded', () => {
   loadCSV();
   document.getElementById('nextBtn').addEventListener('click', showRandomCard);
+  document.getElementById('listBtn').addEventListener('click', showList);
   document.getElementById('card').addEventListener('click', toggleFlip);
   // sorting buttons\n  document.getElementById('mostBtn').addEventListener('click', () => {\n    currentSort = 'most';\n    showList();\n  });\n  document.getElementById('leastBtn').addEventListener('click', () => {\n    currentSort = 'least';\n    showList();\n  });\n  document.getElementById('resetSortBtn').addEventListener('click', () => {\n    currentSort = null;\n    showList();\n  });
   document.getElementById('resetBtn').addEventListener('click', resetDaily);
