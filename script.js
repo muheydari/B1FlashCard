@@ -217,7 +217,19 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('nextBtn').addEventListener('click', showRandomCard);
   document.getElementById('listBtn').addEventListener('click', showList);
   document.getElementById('card').addEventListener('click', toggleFlip);
-  // sorting buttons\n  document.getElementById('mostBtn').addEventListener('click', () => {\n    currentSort = 'most';\n    showList();\n  });\n  document.getElementById('leastBtn').addEventListener('click', () => {\n    currentSort = 'least';\n    showList();\n  });\n  document.getElementById('resetSortBtn').addEventListener('click', () => {\n    currentSort = null;\n    showList();\n  });
+  // sorting buttons
+  document.getElementById('mostBtn').addEventListener('click', () => {
+    currentSort = 'most';
+    showList();
+  });
+  document.getElementById('leastBtn').addEventListener('click', () => {
+    currentSort = 'least';
+    showList();
+  });
+  document.getElementById('resetSortBtn').addEventListener('click', () => {
+    currentSort = null;
+    showList();
+  });
   document.getElementById('resetBtn').addEventListener('click', resetDaily);
   document.getElementById('knownBtn').addEventListener('click', markKnown);
   // progress counters
